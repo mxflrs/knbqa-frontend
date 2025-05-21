@@ -29,3 +29,10 @@ export interface DocumentResponse {
   title: string;
   created_at: string;
 }
+
+export type AskQuestionParams = {
+  question: string;
+  stream: boolean;
+  onToken?: (token: string) => void;
+  onTrace?: (trace: ChainTrace) => void;
+}
