@@ -16,9 +16,11 @@ export async function fetchHistory() {
   return await res.json();
 }
 
-export async function uploadDocument(file: File) {
+export async function uploadDocument(file: File, title: string) {
   const formData = new FormData();
   formData.append("file", file);
+  formData.append("title", title);
+
   const res = await fetch(`${BASE_URL}/documents/`, {
     method: "POST",
     body: formData,
@@ -26,3 +28,4 @@ export async function uploadDocument(file: File) {
   if (!res.ok) throw new Error("Failed to upload document");
   return await res.json();
 }
+
