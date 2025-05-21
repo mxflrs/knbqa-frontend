@@ -33,7 +33,7 @@ export default function DocumentUploader({ onUpload }: { onUpload?: () => void }
   };
 
   return (
-    <form onSubmit={handleUpload} className="flex flex-col gap-2 p-4 bg-slate-900 rounded-xl shadow *:text-white">
+    <form onSubmit={handleUpload} className="flex flex-col gap-2 p-4 bg-gray-100 rounded-xl">
       <label className="text-sm font-medium">Document title</label>
       <input
         type="text"
